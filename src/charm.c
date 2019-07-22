@@ -84,7 +84,8 @@ static void permute(uint32_t st[12])
 
     for (r = 0; r < ROUNDS; r++) {
         for (i = 0; i < 4; i++) {
-            e[i] = ROTR32(st[i] ^ st[i + 4] ^ st[i + 8], 18), e[i] ^= ROTR32(e[i], 9);
+            e[i] = ROTR32(st[i] ^ st[i + 4] ^ st[i + 8], 18);
+            e[i] ^= ROTR32(e[i], 9);
         }
         for (i = 0; i < 12; i++) {
             st[i] ^= e[(i - 1) & 3];
@@ -111,6 +112,7 @@ static inline void endian_swap_rate(uint32_t st[12])
 {
     (void) st;
 #ifdef NATIVE_BIG_ENDIAN
+    size_t i;
     for (i = 0; i < 4; i++) {
         st[i] = __builtin_bswap32(st[i]);
     }
@@ -121,6 +123,7 @@ static inline void endian_swap_all(uint32_t st[12])
 {
     (void) st;
 #ifdef NATIVE_BIG_ENDIAN
+    size_t i;
     for (i = 0; i < 12; i++) {
         st[i] = __builtin_bswap32(st[i]);
     }
