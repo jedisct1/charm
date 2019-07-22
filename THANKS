@@ -1,0 +1,9 @@
+The Xoodoo permutation was designed by
+
+Joan Daemen
+Seth Hoffert,
+Gilles Van Assche
+Ronny Van Keer
+
+Its implementation in Charm is based on the reference
+implementation by Ronny Van Keer.
