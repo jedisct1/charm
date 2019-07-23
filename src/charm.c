@@ -76,7 +76,7 @@ static void permute(uint32_t st[12])
 #elif defined(__ARM_NEON_FP)
 #define ROL32in128(x, b) vsriq_n_u32(vshlq_n_u32((x), (b)), (x), 32 - (b))
 
-void permute(uint32_t st[12])
+static void permute(uint32_t st[12])
 {
     uint32x4_t a, b, c, d, e, f;
     int        r;
