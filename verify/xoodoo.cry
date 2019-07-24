@@ -1,4 +1,4 @@
-// Cryptol implementation of the XOODOO permutation function based on the spec in the paper
+// Cryptol implementation of the Xoodoo permutation function based on the spec in the paper
 // <https://eprint.iacr.org/2018/767>
 //
 // Developed by Adam C. Foltzer <acfoltzer@acfoltzer.net> for verification of charm
