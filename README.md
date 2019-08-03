@@ -9,9 +9,3 @@ permutation (which can be replaced by AES-based [simpira384](https://github.com/
 or Gimli) in a duplex mode.
 
 The Xoodoo implementations in Charm are [formally verified](https://github.com/jedisct1/charm/tree/master/verify) against a Cryptol specification.
-
-Charm is part of a collection of tiny cryptography libraries, along with [strange](https://github.com/jedisct1/strange) (TBA),
-[bottom](https://github.com/jedisct1/bottom) (TBA), and [top](https://github.com/jedisct1/top) (TBA).
-
-These libraries can be used independently, or composed to construct a
-[libhydrogen](https://libhydrogen.org) equivalent.
