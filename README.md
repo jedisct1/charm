@@ -9,3 +9,7 @@ permutation (which can be replaced by AES-based [simpira384](https://github.com/
 or Gimli) in a duplex mode.
 
 The Xoodoo implementations in Charm are [formally verified](https://github.com/jedisct1/charm/tree/master/verify) against a Cryptol specification.
+
+Users:
+
+- [dsvpn](https://github.com/jedisct1/dsvpn) a Dead Simple VPN, designed to address the most common use case for using a VPN.
