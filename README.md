@@ -13,3 +13,7 @@ The Xoodoo implementations in Charm are [formally verified](https://github.com/j
 Users:
 
 - [dsvpn](https://github.com/jedisct1/dsvpn) a Dead Simple VPN, designed to address the most common use case for using a VPN.
+
+Other implementations:
+
+- [zig-charm](https://github.com/jedisct1/zig-charm) an implementation of Charm in the Zig language.
