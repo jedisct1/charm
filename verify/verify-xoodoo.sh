@@ -18,7 +18,10 @@
 
 set -e
 
-[ -f verify-xoodoo.sh ] || (echo "Must be run in the /verify directory"; exit 1)
+[ -f verify-xoodoo.sh ] || (
+    echo "Must be run in the /verify directory"
+    exit 1
+)
 
 if [ -x "${SAW_BIN}/saw" ]; then
     echo "Using SAW executable at: ${SAW_BIN}/saw"
@@ -84,4 +87,3 @@ ${CLANG} -g -c ../src/charm.c -emit-llvm -O1 -o charm-opt.bc
 
 echo "Running SAW proof script"
 ${SAW} xoodoo.saw
-
