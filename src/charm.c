@@ -210,7 +210,11 @@ static inline void squeeze_permute(uint32_t st[12], unsigned char dst[16])
 
 void uc_state_init(uint32_t st[12], const unsigned char key[32], const unsigned char iv[16])
 {
-    memcpy(&st[0], iv, 16);
+    if (iv != NULL) {
+        memcpy(&st[0], iv, 16);
+    } else {
+        memset(&st[0], 0, 16);
+    }
     memcpy(&st[4], key, 32);
     endian_swap_all(st);
     permute(st);
