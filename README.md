@@ -17,3 +17,4 @@ Users:
 Other implementations:
 
 - [zig-charm](https://github.com/jedisct1/zig-charm) an implementation of Charm in the Zig language.
+- [charm.js](https://github.com/jedisct1/charm.js) a JavaScript (TypeScript) implementation.
