@@ -113,7 +113,7 @@ static void permute(uint32_t st[12])
     vst1q_u32((uint32_t *) (void *) &st[8], c);
 }
 #else
-#define ROTR32(x, b) (uint32_t)(((x) >> (b)) | ((x) << (32 - (b))))
+#define ROTR32(x, b) (uint32_t) (((x) >> (b)) | ((x) << (32 - (b))))
 #define SWAP32(s, u, v)              \
     do {                             \
         t      = (s)[u];             \
@@ -179,7 +179,7 @@ static inline void xor128(void *out, const void *in)
                      _mm_xor_si128(_mm_loadu_si128((const __m128i *) out),
                                    _mm_loadu_si128((const __m128i *) in)));
 #else
-    unsigned char *      out_ = (unsigned char *) out;
+    unsigned char       *out_ = (unsigned char *) out;
     const unsigned char *in_  = (const unsigned char *) in;
     size_t               i;
 
