@@ -208,7 +208,6 @@ static inline int equals(const unsigned char a[16], const unsigned char b[16], s
     unsigned char d = 0;
     size_t        i;
 
-    len &= 15;
     for (i = 0; i < len; i++) {
         d |= a[i] ^ b[i];
     }
